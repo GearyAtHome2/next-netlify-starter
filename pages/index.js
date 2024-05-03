@@ -11,9 +11,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
+        <Header title="title text here"" />
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          need to get things working by changing this project over to a react one initially
         </p>
       </main>
 
