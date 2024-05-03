@@ -11,9 +11,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <Header title="title text here"" />
+        <Header title="test home page" />
         <p className="description">
-          need to get things working by changing this project over to a react one initially
+          Switch this to react
         </p>
       </main>
 
