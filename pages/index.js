@@ -5,6 +5,11 @@ import Footer from '@components/Footer'
 export default function Home() {
   return (
     <div className="container">
+        <script>
+            function showRandomNumber(){
+                document.getElementById("myNumber").innerHTML = rando(5, 10);
+            }
+        </script>
       <Head>
         <title>Next.js Starter!</title>
         <link rel="icon" href="/favicon.ico" />
@@ -15,6 +20,9 @@ export default function Home() {
         <p className="description">
           Switch this to react
         </p>
+        <body onload="showRandomNumber();">
+            <div id="myNumber"></div>
+        </body>
       </main>
 
       <Footer />
