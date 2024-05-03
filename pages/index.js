@@ -3,6 +3,16 @@ import Header from '@components/Header'
 import Footer from '@components/Footer'
 
 export default function Home() {
+    const [num, setNum] = useState(0);
+
+    const randomNumberInRange = (min, max) => {
+        return Math.floor(Math.random()
+            * (max - min + 1)) + min;
+    };
+
+    const handleClick = () => {
+        setNum(randomNumberInRange(1, 20));
+    };
   return (
     <div className="container">
 
@@ -17,7 +27,12 @@ export default function Home() {
           Switch this to react
         </p>
       </main>
-
+        <div className="wrapper">
+            <h2>Number is: {num}</h2>
+            <button onClick={handleClick}>
+                Click Me Generate
+            </button>
+        </div>
       <Footer />
     </div>
   )
