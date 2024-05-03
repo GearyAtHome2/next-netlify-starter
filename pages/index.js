@@ -3,7 +3,6 @@ import Header from '@components/Header'
 import Footer from '@components/Footer'
 
 import React, { useState } from "react";
-import "./App.css";
 
 export default function Home() {
     const [num, setNum] = useState(0);
