@@ -6,6 +6,10 @@ import React, { useState } from "react";
 
 export default function Home() {
     const [num, setNum] = useState(0);
+    this.state={
+        index:0,
+        imgList: [image0, image1]
+    }
 
     const randomNumberInRange = (min, max) => {
         return Math.floor(Math.random()
@@ -15,11 +19,6 @@ export default function Home() {
     const image0=require("/public/horse.jpg")
     const image1=require("/public/glassGrind.png")
 
-    this.state={
-        index:0,
-        imgList: [image0, image1]
-    }
-
     let imageUrl='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5'
 
     const handleClick = () => {
@@ -28,12 +27,12 @@ export default function Home() {
             imageUrl='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5';
             console.log("updating image url (larger) for num="+num)
             console.log("imageUrl is "+imageUrl)
-            this.setState{index: 1}
+            this.setState({index: 1})
        } else {
             imageUrl='https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRx8zs6zgLFvexq_8mNEPed7uVHn73vx3ieUBueftliKW8mmRUo';
             console.log("updating image url (smaller) for num="+num)
             console.log("imageUrl is "+imageUrl)
-            this.setState{index: 0}
+            this.setState({index: 0})
        }
        this.forceUpdate()
     };
