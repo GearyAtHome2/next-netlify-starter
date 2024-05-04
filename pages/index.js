@@ -13,16 +13,20 @@ export default function Home() {
             * (max - min + 1)) + min;
     };
 
+    let imageUrls=['https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5',
+    'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRx8zs6zgLFvexq_8mNEPed7uVHn73vx3ieUBueftliKW8mmRUo'
+    ]
+
     let imageUrl='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5'
 
     const handleClick = () => {
         setNum(randomNumberInRange(1, 20));
        if (num>10){
             imageUrl='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5';
-            console.log("updating image url for num="+num)
+            console.log("updating image url (larger) for num="+num)
        } else {
             imageUrl='https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRx8zs6zgLFvexq_8mNEPed7uVHn73vx3ieUBueftliKW8mmRUo';
-            console.log("updating image url for num="+num)
+            console.log("updating image url (smaller) for num="+num)
        }
     };
 
