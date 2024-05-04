@@ -15,6 +15,11 @@ export default function Home() {
     const image0=require("/public/horse.jpg")
     const image1=require("/public/glassGrind.png")
 
+    this.state={
+        index:0,
+        imgList: [image0, image1]
+    }
+
     let imageUrl='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5'
 
     const handleClick = () => {
@@ -23,10 +28,12 @@ export default function Home() {
             imageUrl='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5';
             console.log("updating image url (larger) for num="+num)
             console.log("imageUrl is "+imageUrl)
+            this.setState{index: 1}
        } else {
             imageUrl='https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRx8zs6zgLFvexq_8mNEPed7uVHn73vx3ieUBueftliKW8mmRUo';
             console.log("updating image url (smaller) for num="+num)
             console.log("imageUrl is "+imageUrl)
+            this.setState{index: 0}
        }
        this.forceUpdate()
     };
@@ -39,8 +46,7 @@ export default function Home() {
       </Head>
       <main>
         <div className="wrapper">
-            <img src={imageUrl} key={imageUrl} alt="Horse"/>
-            <img src={image0} key={imageUrl} alt="HorseLocal"/>
+            <img src={this.state.imgList[this.state.index]} alt=""/>
             <h2>Number is: {num}</h2>
             <button onClick={handleClick}>
                 Click Me Generate
