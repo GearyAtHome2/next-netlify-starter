@@ -34,7 +34,7 @@ export default function Home() {
       </Head>
       <main>
         <div className="wrapper">
-            <img src={imgUrl} alt=""/>
+            <img src={imageUrl} alt=""/>
             <h2>Number is: {num}</h2>
 
             <button onClick={handleClick}>
