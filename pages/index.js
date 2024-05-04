@@ -32,7 +32,7 @@ export default function Home() {
           Switch this to react
         </p>
       </main>
-      <img src={horse} alt="horse" height={250} width={200}>
+      <img src={horse} alt="horse" height={250} width={200} />
         <div className="wrapper">
             <h2>Number is: {num}</h2>
             <button onClick={handleClick}>
