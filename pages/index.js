@@ -23,7 +23,7 @@ export default function Home() {
 
 
     const [imageUrl, updateImageUrl] = useState('images/horse.jpg');
-    const [imageList, updateImageList] = useState([img1, img2, img3, img4])
+    const [imageList, updateImageList] = useState([img1, img2, img3, img4, img5])
     const [num, setNum] = useState(randomNumberInRange(imageList.length));
 
     const handleClick = () => {
