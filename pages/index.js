@@ -5,15 +5,17 @@ import Footer from '@components/Footer'
 import React, { useState } from "react";
 
 export default function Home() {
+
+    const img0=require('/public/horse.jpg')
+    const img1=require('/public/glassGrind.png')
+
     const [num, setNum] = useState(0);
-    const [imageUrl, updateImageUrl] = useState('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5');
+    const [imageUrl, updateImageUrl] = useState('/public/horse.jpg');
+    const imageList, updateImageList] = useState([img0, img1])
 
     const randomNumberInRange = (min, max) => {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     };
-
-    const img0=require('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5')
-    const img1=require('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5')
 
     const handleClick = () => {
        setNum(randomNumberInRange(1, 20));
