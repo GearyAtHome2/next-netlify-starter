@@ -3,7 +3,7 @@ import Header from '@components/Header'
 import Footer from '@components/Footer'
 
 import React, { useState } from "react";
-import horse from "./images/horse.jpg";
+import horse from "../images/horse.jpg";
 
 export default function Home() {
     const [num, setNum] = useState(0);
