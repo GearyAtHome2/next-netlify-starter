@@ -6,29 +6,41 @@ import React, { useState } from "react";
 
 export default function Home() {
 
-    const img0=require('/public/horse.jpg')
-    const img1=require('/public/glassGrind.png')
+    const img1="./images/001.png";
+    const img2="./images/002.png"
+    const img3="./images/003.png"
+    const img4="./images/004.png"
+    const imgGameOver="./images/go.png"
 
-    const [num, setNum] = useState(0);
-    const [imageUrl, updateImageUrl] = useState('/public/horse.jpg');
-    const imageList, updateImageList] = useState([img0, img1])
 
-    const randomNumberInRange = (min, max) => {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
+    const randomNumberInRange = (size) => {
+        console.log("generating random number between 0 and "+size)
+        let ranNum = Math.floor(Math.random() * (size));
+        console.log("generated random number:"+ranNum)
+        return ranNum;
     };
+
+
+    const [imageUrl, updateImageUrl] = useState('images/horse.jpg');
+    const [imageList, updateImageList] = useState([img1, img2, img3, img4])
+    const [num, setNum] = useState(randomNumberInRange(imageList.length));
 
     const handleClick = () => {
-       setNum(randomNumberInRange(1, 20));
-       if (num>10) {
-            console.log("updating image url (larger) for num="+num)
-            updateImageUrl(img0)
-            console.log("state url is"+{imageUrl})
-       } else {
-            console.log("updating image url (smaller) for num="+num)
-            updateImageUrl(img1)
-            console.log("state url is"+{imageUrl})
-       }
+        console.log("----------------handling click-----------------")
+        if (imageList.length ==0){
+            updateImageUrl(imgGameOver)
+        } else {
+            setNum(randomNumberInRange(imageList.length-1));
+            updateImageUrl(imageList[num]);
+            removeIndexFromImageList(num)
+        }
     };
+
+    function removeIndexFromImageList(index){
+        let tempImageList=imageList
+        tempImageList.splice(index,1)
+        updateImageList(tempImageList);
+    }
 
   return (
     <div className="container">
@@ -38,7 +50,7 @@ export default function Home() {
       </Head>
       <main>
         <div className="wrapper">
-            <img src={imageUrl} alt=""/>
+            <img src={imageUrl} key={imageUrl} alt=""/>
             <h2>Number is: {num}</h2>
 
             <button onClick={handleClick}>
