@@ -6,7 +6,7 @@ import React, { useState } from "react";
 
 export default function Home() {
     const [num, setNum] = useState(0);
-    const [imageUrl updateImageUrl] = useState('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5');
+    const [imageUrl, updateImageUrl] = useState('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5');
 
     this.state={
         index:0,
