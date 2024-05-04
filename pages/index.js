@@ -14,13 +14,12 @@ export default function Home() {
     }
 
     const randomNumberInRange = (min, max) => {
-        return Math.floor(Math.random()
-            * (max - min + 1)) + min;
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     };
 
     const handleClick = () => {
        setNum(randomNumberInRange(1, 20));
-       if (num>10){
+       if (num>10) {
             console.log("updating image url (larger) for num="+num)
             updateImageUrl('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5')
             console.log("state url is"+{this.state.imageUrl})
