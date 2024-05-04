@@ -24,9 +24,11 @@ export default function Home() {
        if (num>10){
             imageUrl='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5';
             console.log("updating image url (larger) for num="+num)
+            console.log("imageUrl is "+imageUrl)
        } else {
             imageUrl='https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRx8zs6zgLFvexq_8mNEPed7uVHn73vx3ieUBueftliKW8mmRUo';
             console.log("updating image url (smaller) for num="+num)
+            console.log("imageUrl is "+imageUrl)
        }
     };
 
@@ -42,7 +44,7 @@ export default function Home() {
           Switch this to react
         </p>
       </main>
-      <img src={imageUrl} alt="Horse" />
+      <img src={imageUrl} key={imageUrl} alt="Horse"/>
         <div className="wrapper">
             <h2>Number is: {num}</h2>
             <button onClick={handleClick}>
