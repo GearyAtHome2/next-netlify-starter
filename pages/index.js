@@ -3,6 +3,7 @@ import Header from '@components/Header'
 import Footer from '@components/Footer'
 
 import React, { useState } from "react";
+import horse from "./images/horse.jpg";
 
 export default function Home() {
     const [num, setNum] = useState(0);
@@ -15,6 +16,8 @@ export default function Home() {
     const handleClick = () => {
         setNum(randomNumberInRange(1, 20));
     };
+
+
   return (
     <div className="container">
 
@@ -29,6 +32,7 @@ export default function Home() {
           Switch this to react
         </p>
       </main>
+      <img src={horse} alt="horse" height={250} width={200}>
         <div className="wrapper">
             <h2>Number is: {num}</h2>
             <button onClick={handleClick}>
