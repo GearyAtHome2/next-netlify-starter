@@ -12,18 +12,20 @@ export default function Home() {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     };
 
+    const img0=require('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5')
+    const img1=require('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5')
+
     const handleClick = () => {
        setNum(randomNumberInRange(1, 20));
        if (num>10) {
             console.log("updating image url (larger) for num="+num)
-            updateImageUrl('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5')
+            updateImageUrl(img0)
             console.log("state url is"+{imageUrl})
        } else {
             console.log("updating image url (smaller) for num="+num)
-            updateImageUrl('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRx8zs6zgLFvexq_8mNEPed7uVHn73vx3ieUBueftliKW8mmRUo')
+            updateImageUrl(img1)
             console.log("state url is"+{imageUrl})
        }
-//       this.forceUpdate()
     };
 
   return (
