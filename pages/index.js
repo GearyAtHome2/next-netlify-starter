@@ -17,6 +17,7 @@ export default function Home() {
         setNum(randomNumberInRange(1, 20));
     };
 
+    const imageUrl='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5';
 
   return (
     <div className="container">
@@ -30,7 +31,7 @@ export default function Home() {
           Switch this to react
         </p>
       </main>
-      <img src={horse} alt="Horse" />
+      <img src={imageUrl} alt="Horse" />
         <div className="wrapper">
             <h2>Number is: {num}</h2>
             <button onClick={handleClick}>
