@@ -6,11 +6,7 @@ import React, { useState } from "react";
 
 export default function Home() {
     const [num, setNum] = useState(0);
-
-    const image0=require("/public/horse.jpg")
-    const image1=require("/public/glassGrind.png")
-
-    let imageUrl='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5'
+    const [imageUrl updateImageUrl] = useState('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5');
 
     this.state={
         index:0,
@@ -25,17 +21,15 @@ export default function Home() {
     const handleClick = () => {
        setNum(randomNumberInRange(1, 20));
        if (num>10){
-            imageUrl='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5';
             console.log("updating image url (larger) for num="+num)
-            console.log("imageUrl is "+imageUrl)
-            this.setState({index: 1})
+            updateImageUrl('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5')
+            console.log("state url is"+{this.state.imageUrl})
        } else {
-            imageUrl='https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRx8zs6zgLFvexq_8mNEPed7uVHn73vx3ieUBueftliKW8mmRUo';
             console.log("updating image url (smaller) for num="+num)
-            console.log("imageUrl is "+imageUrl)
-            this.setState({index: 0})
+            updateImageUrl('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRx8zs6zgLFvexq_8mNEPed7uVHn73vx3ieUBueftliKW8mmRUo')
+            console.log("state url is"+{this.state.imageUrl})
        }
-       this.forceUpdate()
+//       this.forceUpdate()
     };
 
   return (
@@ -46,8 +40,9 @@ export default function Home() {
       </Head>
       <main>
         <div className="wrapper">
-            <img src={this.state.imgList[this.state.index]} alt=""/>
+            <img src={this.state.imgUrl} alt=""/>
             <h2>Number is: {num}</h2>
+
             <button onClick={handleClick}>
                 Click Me Generate
             </button>
