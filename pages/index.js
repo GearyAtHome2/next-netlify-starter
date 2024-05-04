@@ -12,7 +12,7 @@ export default function Home() {
             * (max - min + 1)) + min;
     };
 
-    const image0=require("./public/horse.jpg")
+    const image0=require("/public/horse.jpg")
     const image1=require("/public/glassGrind.png")
 
     let imageUrl='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5'
