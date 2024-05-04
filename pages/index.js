@@ -17,10 +17,12 @@ export default function Home() {
 
     const handleClick = () => {
         setNum(randomNumberInRange(1, 20));
-       if (setNum>10){
+       if (num>10){
             imageUrl='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5';
+            console.log("updating image url for num="num)
        } else {
             imageUrl='https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRx8zs6zgLFvexq_8mNEPed7uVHn73vx3ieUBueftliKW8mmRUo';
+            console.log("updating image url for num="num)
        }
     };
 
