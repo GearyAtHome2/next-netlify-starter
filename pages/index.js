@@ -3,7 +3,6 @@ import Header from '@components/Header'
 import Footer from '@components/Footer'
 
 import React, { useState } from "react";
-import horse from "./horse.jpg";
 
 export default function Home() {
     const [num, setNum] = useState(0);
@@ -13,9 +12,8 @@ export default function Home() {
             * (max - min + 1)) + min;
     };
 
-    let imageUrls=['https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5',
-    'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRx8zs6zgLFvexq_8mNEPed7uVHn73vx3ieUBueftliKW8mmRUo'
-    ]
+    const image0=require("horse.jpg")
+    const image1=require("./glassGrind.jpg")
 
     let imageUrl='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5'
 
