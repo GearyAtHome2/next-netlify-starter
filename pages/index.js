@@ -51,7 +51,6 @@ export default function Home() {
             <button onClick={handleClick}>
                 Click Me Generate
             </button>
-            </button>
         </div>
       </main>
       <Footer />
