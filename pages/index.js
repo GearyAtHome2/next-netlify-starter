@@ -22,11 +22,11 @@ export default function Home() {
        if (num>10) {
             console.log("updating image url (larger) for num="+num)
             updateImageUrl('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5')
-            console.log("state url is"+{this.state.imageUrl})
+            console.log("state url is"+{imageUrl})
        } else {
             console.log("updating image url (smaller) for num="+num)
             updateImageUrl('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRx8zs6zgLFvexq_8mNEPed7uVHn73vx3ieUBueftliKW8mmRUo')
-            console.log("state url is"+{this.state.imageUrl})
+            console.log("state url is"+{imageUrl})
        }
 //       this.forceUpdate()
     };
@@ -39,7 +39,7 @@ export default function Home() {
       </Head>
       <main>
         <div className="wrapper">
-            <img src={this.state.imgUrl} alt=""/>
+            <img src={imgUrl} alt=""/>
             <h2>Number is: {num}</h2>
 
             <button onClick={handleClick}>
