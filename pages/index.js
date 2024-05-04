@@ -3,7 +3,7 @@ import Header from '@components/Header'
 import Footer from '@components/Footer'
 
 import React, { useState } from "react";
-import horse from "/images/horse.jpg";
+import horse from "./horse.jpg";
 
 export default function Home() {
     const [num, setNum] = useState(0);
@@ -54,6 +54,7 @@ export default function Home() {
       <main>
         <div className="wrapper">
             <img src={imageUrl} key={imageUrl} alt="Horse"/>
+                        <img src={horse} key={imageUrl} alt="HorseLocal"/>
             <h2>Number is: {num}</h2>
             <button onClick={handleClick}>
                 Click Me Generate
