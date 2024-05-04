@@ -6,6 +6,7 @@ import React, { useState } from "react";
 
 export default function Home() {
     const [num, setNum] = useState(0);
+
     this.state={
         index:0,
         imgList: [image0, image1]
@@ -22,7 +23,7 @@ export default function Home() {
     let imageUrl='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5'
 
     const handleClick = () => {
-        setNum(randomNumberInRange(1, 20));
+       setNum(randomNumberInRange(1, 20));
        if (num>10){
             imageUrl='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5';
             console.log("updating image url (larger) for num="+num)
@@ -49,6 +50,7 @@ export default function Home() {
             <h2>Number is: {num}</h2>
             <button onClick={handleClick}>
                 Click Me Generate
+            </button>
             </button>
         </div>
       </main>
