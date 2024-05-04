@@ -6,6 +6,12 @@ import React, { useState } from "react";
 
 export default function Home() {
 
+//    const img1="./images/001.png";
+//    const img2="./images/002.png"
+//    const img3="./images/003.png"
+//    const img4="./images/004.png"
+//    const imgGameOver="./images/go.png"
+
     const img1="./safeImages/test1.png";
     const img2="./safeImages/test2.png";
     const img3="./safeImages/test3.png";
