@@ -39,18 +39,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Header title="test home page" />
-        <p className="description">
-          Switch this to react
-        </p>
-      </main>
-      <img src={imageUrl} key={imageUrl} alt="Horse"/>
+        <img src={imageUrl} key={imageUrl} alt="Horse"/>
         <div className="wrapper">
+            <img src={imageUrl} key={imageUrl} alt="Horse"/>
             <h2>Number is: {num}</h2>
             <button onClick={handleClick}>
                 Click Me Generate
             </button>
         </div>
+      </main>
       <Footer />
     </div>
   )
