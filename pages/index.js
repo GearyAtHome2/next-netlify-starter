@@ -51,10 +51,8 @@ export default function Home() {
       <main>
         <div className="wrapper">
             <img src={imageUrl} key={imageUrl} alt=""/>
-            <h2>Number is: {num}</h2>
-
             <button onClick={handleClick}>
-                Click Me Generate
+                Pick a card for me!
             </button>
         </div>
       </main>
