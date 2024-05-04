@@ -21,25 +21,13 @@ export default function Home() {
         setNum(randomNumberInRange(1, 20));
        if (num>10){
             imageUrl='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5';
-            setState({
-                imageUrl: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSiq57UyI71H6Lz2isMdomE4z2JNekyXhlxnoMpMgbRDAkVG2R5',
-                imageHash: Date.now()
-            })
             console.log("updating image url (larger) for num="+num)
             console.log("imageUrl is "+imageUrl)
        } else {
             imageUrl='https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRx8zs6zgLFvexq_8mNEPed7uVHn73vx3ieUBueftliKW8mmRUo';
-            setState({
-                imageUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRx8zs6zgLFvexq_8mNEPed7uVHn73vx3ieUBueftliKW8mmRUo',
-                imageHash: Date.now()
-            })
             console.log("updating image url (smaller) for num="+num)
             console.log("imageUrl is "+imageUrl)
        }
-       setState({
-          imageSrc: '...',
-          imageHash: Date.now()
-       })
        this.forceUpdate()
     };
 
@@ -52,7 +40,7 @@ export default function Home() {
       <main>
         <div className="wrapper">
             <img src={imageUrl} key={imageUrl} alt="Horse"/>
-                        <img src={horse} key={imageUrl} alt="HorseLocal"/>
+            <img src={image0} key={imageUrl} alt="HorseLocal"/>
             <h2>Number is: {num}</h2>
             <button onClick={handleClick}>
                 Click Me Generate
