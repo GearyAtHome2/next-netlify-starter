@@ -1,16 +1,11 @@
 import Head from 'next/head'
 import Header from '@components/Header'
-import Footer from '@components/Footer'
+import CardPage1Test from '@components/cardPages/CardPage1Test'
 
 import React, { useState } from "react";
 
 export default function Home() {
 
-//    const img1="./images/001.png";
-//    const img2="./images/002.png"
-//    const img3="./images/003.png"
-//    const img4="./images/004.png"
-//    const imgGameOver="./images/go.png"
 
     const img1="./safeImages/test1.png";
     const img2="./safeImages/test2.png";
@@ -19,7 +14,6 @@ export default function Home() {
     const img5="./safeImages/test5.png";
     const imgGameOver="./images/go.png"
 
-
     const randomNumberInRange = (size) => {
         console.log("generating random number between 0 and "+size)
         let ranNum = Math.floor(Math.random() * (size));
@@ -27,10 +21,10 @@ export default function Home() {
         return ranNum;
     };
 
-
     const [imageUrl, updateImageUrl] = useState('images/horse.jpg');
     const [imageList, updateImageList] = useState([img1, img2, img3, img4, img5])
     const [num, setNum] = useState(randomNumberInRange(imageList.length));
+    const [backgroundColour, setBGC] = useState("blue");
 
     const handleClick = () => {
         console.log("----------------handling click-----------------")
@@ -49,6 +43,11 @@ export default function Home() {
         updateImageList(tempImageList);
     }
 
+    function TitleHeader({title}) {
+        console.log(title);
+        return <h1>{title}</h1>;
+    }
+
   return (
     <div className="container">
       <Head>
@@ -58,12 +57,12 @@ export default function Home() {
       <main>
         <div className="wrapper">
             <img src={imageUrl} key={imageUrl} alt=""/>
+            <TitleHeader title="fdsfgs"/>
             <button onClick={handleClick}>
                 Pick a card for me!
             </button>
         </div>
       </main>
-      <Footer />
     </div>
   )
 }
