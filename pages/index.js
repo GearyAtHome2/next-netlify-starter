@@ -7,11 +7,26 @@ import React, { useState } from "react";
 export default function Home() {
 
 
-    const img1="./safeImages/test1.png";
-    const img2="./safeImages/test2.png";
-    const img3="./safeImages/test3.png";
-    const img4="./safeImages/test4.png";
-    const img5="./safeImages/test5.png";
+    const img1="./images/001.png";
+    const img2="./images/002.png";
+    const img3="./images/003s.png";
+    const img4="./images/004s.png";
+    const img5="./images/005s.png";
+    const img6="./images/006s.png";
+    const img7="./images/007s.png";
+    const img8="./images/008s.png";
+    const img9="./images/009s.png";
+    const img10="./images/010.png";
+    const img11="./images/011.png";
+    const img12="./images/012.png";
+    const img13="./images/013.png";
+    const img14="./images/014.png";
+    const img15="./images/015s.png";
+    const img16="./images/016.png";
+    const img17="./images/017s.png";
+    const img18="./images/018s.png";
+    const img19="./images/019.png";
+    const img20="./images/020.png";
     const imgGameOver="./images/go.png"
 
     const randomNumberInRange = (size) => {
@@ -22,7 +37,12 @@ export default function Home() {
     };
 
     const [imageUrl, updateImageUrl] = useState('images/horse.jpg');
-    const [imageList, updateImageList] = useState([img1, img2, img3, img4, img5])
+    const [imageList, updateImageList] = useState([
+    img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
+    img11, img12, img13, img14, img15, img16, img17, img18, img19, img20,
+    img1, img2, img11, img12, img13, img14, img16, img19, img20,
+    img16, img19, img19, img20
+    ])
     const [num, setNum] = useState(randomNumberInRange(imageList.length));
     const [backgroundColour, setBGC] = useState("blue");
 
@@ -57,7 +77,6 @@ export default function Home() {
       <main>
         <div className="wrapper">
             <img src={imageUrl} key={imageUrl} alt=""/>
-            <TitleHeader title="fdsfgs"/>
             <button onClick={handleClick}>
                 Pick a card for me!
             </button>
@@ -66,3 +85,7 @@ export default function Home() {
     </div>
   )
 }
+
+//            <TitleHeader title="fdsfgs"/>
+
+//npm run build
